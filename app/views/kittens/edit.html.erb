@@ -1,0 +1,6 @@
+<h2>Update</h2>
+
+<%= render 'form' %>
+
+<%= link_to 'Delete', kitten_path(@kitten), method: :delete, data: {confirm: 'Are you sure you want to delete?'}%><br>
+<%= link_to 'Back', root_path %>

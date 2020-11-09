@@ -1,0 +1,24 @@
+<h1> Details</h1>
+
+<% flash.each do |type, msg| %>
+  <%= msg %>
+<% end %>
+
+ <table>
+   <tr>
+     <th>Name</th>
+     <th>Age</th>
+     <th>Cuteness</th>
+     <th>Softness</th>
+   <tr>
+   
+   <tr>
+     <td><%= @kitten.name %></td>
+      <td><%= @kitten.age %></td>
+      <td><%= @kitten.cuteness %></td>
+      <td><%= @kitten.softness %></td>
+    </tr>
+  </table><br>
+<%= link_to 'New', new_kitten_path %><br>
+<%= link_to 'Home', root_path %><br>
+<%= link_to 'Delete', @kitten, method: :delete, data: {confirm: 'Are you sure you want to delete?'}%>
